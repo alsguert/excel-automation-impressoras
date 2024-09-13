@@ -2,8 +2,6 @@ import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.styles import Border, Side, Alignment, Font
 from openpyxl.utils.dataframe import dataframe_to_rows
-from openpyxl.drawing.image import Image
-from openpyxl.chart import BarChart, Reference, LineChart
 
 # Leitura do CSV com delimitador e encoding apropriados
 try:
@@ -23,8 +21,8 @@ try:
     df['Data_de_Impressão'] = pd.to_datetime(df['Data_de_Impressão'], format='%d/%m/%Y %H:%M', errors='coerce')
     
     # Definir o intervalo de datas
-    start_date = pd.to_datetime('07/08/2024', format='%d/%m/%Y')
-    end_date = pd.to_datetime('07/09/2024', format='%d/%m/%Y')
+    start_date = pd.to_datetime('01/08/2024', format='%d/%m/%Y')
+    end_date = pd.to_datetime('31/08/2024', format='%d/%m/%Y')
     
     # Filtrar os dados entre as duas datas
     df_filtered = df[(df['Data_de_Impressão'] >= start_date) & (df['Data_de_Impressão'] <= end_date)]
