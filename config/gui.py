@@ -39,7 +39,7 @@ def process_file(file_path, start_date, end_date, status_var, status_label):
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)  # Cria a pasta 'salvos' se não existir
             
-            output_file = os.path.join(output_dir, 'resultado.xlsx')
+            output_file = os.path.join(output_dir, 'Resultado.xlsx')
             
             # Salvar os dados processados no Excel
             save_to_excel(df_agrupado, output_file)
